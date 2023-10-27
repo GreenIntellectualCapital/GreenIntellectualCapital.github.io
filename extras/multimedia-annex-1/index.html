@@ -1,0 +1,192 @@
+
+
+
+<header>
+                            <div class="header-bar">
+                                <h1 class="post-title">Multimedia Annex 1</h1>
+                                <h2>STM extraction and results</h2>
+                                <p class="post-meta">September 25, 2023</p>
+                            </div>
+                        </header>
+                        <br>
+                        <article class="post-content">
+                            <div id="markdown-content">
+                                <div>
+                                    <h3 id="structural-topic-model">The Structural Topic Model</h3>
+                                    <p>
+                                        The STM is a generative probabilistic model based on Bayesian distribution that allows, thanks to a semi-supervised procedure, to identify the thematic patterns underlying the text (latent topics or knowledge areas). Unlike LDA, STM supports the use of relevant metadata as covariates for model estimation (see Figure I; <i>X</i>
+                                        and <i>Y</i>
+                                        parameters) and to estimate the impact of such covariates on the size and content of latent topics. In the STM, each document is a mixture of all topics, and each topic (
+                                        <i>
+                                            Σ<sub>i</sub>
+                                        </i>
+                                        ) is a distribution of words (<i>W</i>
+                                        ) included in documents. Given a number of topics = <i>K</i>
+                                        , each latent topic then has an assigned probability, from 0 to 1, to appear in a document (
+                                        <i>
+                                            θ<sub>i</sub>
+                                        </i>
+                                        , i.e., topic proportion) and the sum of <i>θ</i>
+                                        for all topics in each document = 1.
+                                    </p>
+                                    <p>
+                                        <strong>Figure I: STM generative algorithm</strong>
+                                    </p>
+                                </div>
+                                <div class="col-sm mt-3 mt-md-0">
+                                    <figure>
+                                        <picture>
+                                            <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/STM-generative-algorithm.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/STM-generative-algorithm.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/STM-generative-algorithm.jpg"></source>
+                                            <img src="/assets/img/STM-generative-algorithm.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="caption">
+                                    <em>From: Roberts et al., 2016.</em>
+                                </div>
+                                <h3 data-toc-text="STM Estimation" id="stm-estimation">STM Estimation</h3>
+                                <p>prova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova provaprova prova prova.</p>
+                                <h3 data-toc-text="Topics-Metadata Relation" id="Topics-Metadata-relation">Topics-Metadata Relation</h3>
+                                <p>
+                                    To better qualify knowledge areas, the effect of relevant corpus metadata on topic proportion has been assessed via logistic regression analysis, using the  <em>EstimateEffect</em>
+                                    function provided by the <em>STM</em>
+                                    R package.
+                                </p>
+                                <p>Looking at the impact of Environmental Consciousness (EC) on knowledge areas (Figure II), the analysis shows that sustainability concerns positively affect the emergence of Topic 1, Topic 3 and Topic 4 while result negatively associated with Topic 5, Topic 7, and Topic 8.</p>
+                                <p>
+                                    <strong>Figure II: Impact of Environmental Consciousness on topic proportion</strong>
+                                </p>
+                                <div class="col-sm mt-3 mt-md-0">
+                                    <figure>
+                                        <picture>
+                                            <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/effect-of-EC-on-topics.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/effect-of-EC-on-topics.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/effect-of-EC-on-topics.jpg"></source>
+                                            <img src="/assets/img/effect-of-EC-on-topics.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="caption">
+                                    <em>Note. Environmental Consciousness on the horizontal axis; Topic proportion on the vertical axis.</em>
+                                </div>
+                                <p>Topic 2 and Topic 6, on the other hand, do not appear to be particularly affected by the level of firms' EC, showing a constant proportion in the corpus at both low and high levels of EC. Topics evidencing a negative relationship with EC (i.e., Topic 5, Topic 7, and Topic 8) result as particularly associated with the social dimension of sustainable development (Figure III), while Topic 1 and Topic 6 mostly relate to the environmental dimension. Topic 2, Topic 3 and Topic 4, on the other hand, are found to be focused on the economic dimension of sustainable development.</p>
+                                <p>
+                                    <strong>Figure III: Impact of Sustainability Dimensions on topic proportion</strong>
+                                </p>
+                                <div class="col-sm mt-3 mt-md-0">
+                                    <figure>
+                                        <picture>
+                                            <source class="responsive-img-srcset" media="(max-width: 480px)" srcset="/assets/img/effect-of-dimensions-on-topics.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 800px)" srcset="/assets/img/effect-of-dimensions-on-topics.jpg"></source>
+                                            <source class="responsive-img-srcset" media="(max-width: 1400px)" srcset="/assets/img/effect-of-dimensions-on-topics.jpg"></source>
+                                            <img src="/assets/img/effect-of-dimensions-on-topics.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="caption">
+                                    <em>Note. ENV = Environmental Dimension; ECO = Economic Dimension; SOC = Social Dimension.</em>
+                                </div>
+                                <h3 id="knowledge-areas-description">Knowledge Areas Description</h3>
+                                <p>Based on the emerged results, it is now possible to describe the eight knowledge areas of the energy SMEs sample. As shown in Table I, Topic 8, which reflects knowledge aspects related to business development and research activities, results as the most represented knowledge area (16.38%), followed by Topic 7 (15.20%) which encompasses the customer and societal implications of business. Other topics are found to be homogeneously distributed, with an expected proportion from 9.82% of Topic 1 to 12.46% of Topic 2.</p>
+                            </div>
+                            <table data-toggle="table" data-url="/assets/json/knowledge-areas.json">
+                                <thead>
+                                    <tr>
+                                        <th data-field="Label">Label</th>
+                                        <th data-field="Theta">Theta</th>
+                                        <th data-field="Top Terms">Top Terms</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="caption">
+                                <em>Note. The table reports the expected proportion (i.e., Theta) within the research corpus and the most representative terms of each knowledge area. Moreover, by inspecting most relevant terms and documents, a label has been assigned to each area.</em>
+                            </div>
+                            <p>Further details on the description of each knowledge area can be found hereafter.</p>
+                            <h4 data-toc-text="T1: Energy Alternatives" id="t1-energy-alternatives">T1: Energy Alternatives</h4>
+                            <p>
+                                This area is associated with high levels of Environmental Consciousness and primarily focuses on environmental aspects of sustainable development. It encompasses a wide range of understandings referring both to fossil energy sources and their environmental impact (e.g., “<em>principal driver climate change greenhouse effect causes vast quantities of carbon dioxide emit byproduct industrial process transportation electricity generation anthropogenic source modern measure reduce carbon emission atmospheric </em>
+                                […]”; Doc. ID: 30,024) and to renewable and low-impact energy sources (e.g., “<em>single fast efficient realistic alternative reach fossil free vehicle fleet phase fossil fuel quickly replace biofuel biofuel directly reduce emission fossil vehicle reduction lignol problem climate cost effective biofuel model operation achieve goal take year</em>
+                                […]”; Doc. ID: 34,311).
+                            </p>
+                            <h4 data-toc-text="T2: Policy and Regulations" id="t2-policy-regulations">T2: Policy & Regulations</h4>
+                            <p>
+                                The second area results not particularly influenced by Environmental Consciousness level and mostly refers to economic sustainability implications of energy policies and regulations (e.g., “<em>modification energy certification procedure building draft article financial incentive improvement energy efficiency obligation report prior nature energy rating sale rent property announcement mean owner party represent real estate miss modification affect explain today force june legal text derogate regulate basic procedure energy certification</em>
+                                […]”; Doc. ID: 13,187), new responsible practices being imposed on firms (e.g., “<em>royal decree oblige large company perform energy audits year gese conduct energy audits aim improve energy efficiency reduce energy consumption company</em>
+                                […]”; Doc. ID: 12,898) and consumer protection policies (e.g., “<em>accordance spanish law lopd personal datum protection energías renovable</em>
+                                […]”; Doc. ID: 14,492).
+                            </p>
+                            <h4 data-toc-text="T3: Energy Costs" id="t3-energy-costs">T3: Energy Costss
+</h3>
+<p>
+    The thrird area positively associates with Environmental Consciousness and focuses on economic and environmental sustainability concerns emerging from energy pricing strategies and energy efficiency measures aimed at more efficient consumption (e.g., “<em>install heat pump housing economical ecological indeed reduce cost energy renovation limit work later heat pump reduce energy consumption compare electric heating system</em>
+    […]”; Doc. ID: 11,166) and energy costs reduction for consumers (e.g., “<em>good energy guarantee percentage gas electricity buy renewable source alternative fix price tariff</em>
+    […]”; Doc. ID: 26,557).
+</p>
+<h4 data-toc-text="T4: Financial Investments" id="t4-financial-investments">T4: Financial Investments
+</h3>
+<p>
+    This area reflects a high Environmental Consciousness of firms and focuses on the economic sustainability aspects related to investment (e.g., “<em>chief executive say it fantastic achievement reach financial close phase world s large offshore wind project week cop conclude glasgow today mark important early milestone delivery net zero acceleration programme</em>
+    […]”; Doc. ID: 21,426) and public financing initiatives (e.g., “<em>addition exist national government grant scheme renewable energy</em>
+    […]”; Doc. ID: 28,592) aimed at building renewable energy infrastructure such as wind and solar farms.
+</p>
+<h4 data-toc-text="T5: Green Product Design" id="t5-green-product-design">T5: Green Product Design
+</h3>
+<p>
+    The area includes a wide variety of content referring to B2C products and services showing an ecological (e.g., “<em>economic form ecological cultivation increase production biological product</em>
+    […]”; Doc. ID: 2,218) or sustainable nuance (e.g., “<em>neutral suitable biobase bag sustainable alternative plastic wood fiber base</em>
+    […]”; Doc. ID: 18,977). Although this area addresses issues of societal relevance, the STM results show that firms with high Environmental Consciousness tend not to cover this knowledge area.
+</p>
+<h4 data-toc-text="T6: Energy Management" id="t6-energy-management">T6: Energy Management
+</h3>
+<p>
+    The area focuses on environmental sustainability aspects related to processes and technologies that enable efficient energy management (e.g., “<em>solar produce distribute electricity intelligently possible depend time individual consumption situation build in energy management system decide energy need</em>
+    […]”; Doc. ID: 5,001) and storage (e.g., “<em>system important prerequisite successful energy transition power storage power generation renewable energy</em>
+    […]”; Doc. ID: 3,486). As seen in T2, the proportion of T6 remains stable over the corpus, meaning that the prominence of this knowledge area seems not to be affected by the level of Environmental Consciousness.
+</p>
+<h4 data-toc-text="T7: Human Care" id="t7-human-care">T7: Human Care
+</h3>
+<p>
+    The area results as strongly linked to issues of social relevance referring to Corporate Social Responsibility (e.g., “<em>invest social responsibility initiative mean business involve local event community experience</em>
+    […]”; Doc. ID: 26,820), intended both as a focus on the well-being and growth of employees (e.g., “<em>organisation industry discover attract retain right talent require excellent salary corporate wellbeing program quickly emerge ultimate employer differentiator invest workplace wellbeing</em>
+    […]”; Doc. ID: 21,966), and the support of the human communities in which organizations operate (e.g., “<em>strategy instance claim care environment involve local sustainability drive clean community customer you re authentic credible build emotional connection base feeling</em>
+    […]”; Doc. ID: 20,934). However, this area is found to be negatively associated with Environmental Consciousness, meaning that when Environmental Consciousness is high this topic is addressed with lower frequency.
+</p>
+<h4 data-toc-text="T8: Research and Development" id="t8-research-and-development">T8: Research & Development
+</h3>
+<p>
+    Negatively associated with Environmental Consciousness, this last area focuses on social and economic aspects, mainly concerning technical innovation (e.g., “<em>global ambition support utility world accelerate energy transition technology innovation</em>
+    […]”; Doc. ID: 19,919), research & development (e.g., “<em>engineering experience involve aspect energy research year include modelling datum analysis project management</em>
+    […]”; Doc. ID: 29,309) that organizations perform and bring to the market.
+</p>
+</article>
+<nav aria-label="Multimedia Annexes Naviation">
+    <ul class="pagination pagination-lg justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="" tabindex="-1" aria-disabled="">Multimedia Annex</a>
+        </li>
+        <li class="page-item ">
+            <a class="page-link" href="/extras/multimedia-annex-1/index.html" title="Multimedia Annex 1">1</a>
+        </li>
+        <li class="page-item ">
+            <a class="page-link" href="/extras/multimedia-annex-2/index.html" title="Multimedia Annex 2">2</a>
+        </li>
+        <li class="page-item ">
+            <a class="page-link" href="/extras/multimedia-annex-3/index.html" title="Multimedia Annex 3">3</a>
+        </li>
+        <li class="page-item ">
+            <a class="page-link" href="/extras/multimedia-annex-4/index.html" title="Multimedia Annex 4">4</a>
+        </li>
+        <li class="page-item ">
+            <a class="page-link" href="/extras/multimedia-annex-5/index.html" title="Multimedia Annex 5">5</a>
+        </li>
+        <li class="page-item active">
+            <a class="page-link" href="/extras/multimedia-annex-6/index.html" title="Multimedia Annex 6">6</a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link" href="">>>Next</a>
+        </li>
+    </ul>
+</nav>
+</div></div></div></div>
