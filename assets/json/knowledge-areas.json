@@ -1,0 +1,42 @@
+[
+ {
+  "Label": "T1: Energy Alternatives",
+  "Theta": "9.82%",
+  "Top Terms": "gas, carbon, emission, fuel, oil, hydrogen, climate, waste, production, source, zero, plant, fossil, natural, transport, vehicle, industry, clean, biomass, greenhouse"
+ },
+ {
+  "Label": "T2: Policy & Regulations ",
+  "Theta": "12.46%",
+  "Top Terms": "network, building, consumption, management, customer, law, operator, regulation, efficiency, requirement, report, certificate, performance, contract, public, protection, tax, consumer, euro, operation"
+ },
+ {
+  "Label": "T3: Energy Costs",
+  "Theta": "10.78%",
+  "Top Terms": "cost, price, water, pump, gas, save, air, boiler, consumption, customer, pay, saving, tariff, contract, temperature, installation, thermal, house, benefit, source"
+ },
+ {
+  "Label": "T4: Financial Investments",
+  "Theta": "12.18%",
+  "Top Terms": "wind, market, investment, development, price, turbine, fund, farm, local, plant, investor, country, production, capital, generation, park, construction, government, community, grid"
+ },
+ {
+  "Label": "T5: Green Product Design",
+  "Theta": "11.26%",
+  "Top Terms": "water, material, product, building, light, construction, food, plant, plastic, environment, city, natural, life, surface, house, lighting, nature, waste, tree, forest"
+ },
+ {
+  "Label": "T6: Energy Management",
+  "Theta": "11.92%",
+  "Top Terms": "solar, battery, photovoltaic, installation, storage, roof, car, grid, consumption, network, cost, vehicle, plant, sun, production, station, generation, house, voltage, feed"
+ },
+ {
+  "Label": "T7: Human Care",
+  "Theta": "15.20%",
+  "Top Terms": "customer, people, world, climate, future, social, employee, create, environment, city, community, school, development, action, challenge, idea, life, partner, product, association"
+ },
+ {
+  "Label": "T8: Research & Development",
+  "Theta": "16.38%",
+  "Top Terms": "industry, management, development, sector, market, product, innovation, customer, engineering, research, partner, digital, software, operation, infrastructure, university, challenge, world, manager, strategy"
+ }
+]
