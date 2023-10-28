@@ -74,8 +74,8 @@
                     <div class="post">
                         <header>
                             <div class="header-bar">
-                                <h1 class="post-title">Multimedia Annex 2</h1>
-                                <h2>Details on Alternative Network-Based GIC Measures</h2>
+                                <h1 class="post-title">Multimedia Annex 4</h1>
+                                <h2>Knowledge Graphs Estimation Details</h2>
                                 <p class="post-meta">September 26, 2023</p>
                             </div>
                         </header>
@@ -83,11 +83,37 @@
                         <article class="post-content">
                             <div id="markdown-content">
                                 <div>
-                                    <p> In order to choose a network-based measure of firms' GIC, multiple global network metrics, partially overlapping with the concept of network activation, have been considered.</p> 
-                                    <h3 id="density">Density</h3>
+                                    <h3 id="kg-estimation-levels">KG Estimation Levels</h3>
                                     <p>
-                                      This theme supports rendering beautiful math in inline and display modes using <a href="https://www.mathjax.org/" rel="external nofollow noopener" target="_blank">MathJax 3</a>
-                            engine. You just need to surround your math expression with <code class="language-plaintext highlighter-rouge">$$</code>
+                                        In order to test the research hypotheses, knowledge graphs have been estimated with an increasing degree of specificity. In first, the Knowledge Graph (KG) resulting from the whole research sample od SMEs (global-level) has been estimated. Subsequently, a KG has been estimated for each level of the GIC-related variables (i.e., Environmental Consciousness, Innovation Capability and Economic Performance), by splitting firms into 6 groups (<em>low</em> Vs <em>high</em> level of each variable). At last, a KG for each firm has been estimated (firm-level).          
+                                     </p>
+                                    <br>
+                                    <h4 id="global-level-kg">Global-Level Knowledge Graph Estimation</h4>
+                                        <p>According to the first research aim, a Knowledge Graph representing the overall knowledge structure of the energy SMEs, operating in the 8 countries considered, has been estimated. To this end, the estimation procedure described above has been applied to the whole research sample of 2,902 firms.The resulting Knowledge Graph has then been visualized through the <a href="https://www.rdocumentation.org/packages/qgraph/versions/1.9.5" rel="external nofollow noopener" target="_blank">Qgraph</a> Qgraph R package using a circular layout. Edges showing weights less than |0.2| have been removed from the displayed graph for visualization purposes.
+                                        </p>
+                                    <br>
+                                    <h4 id="group-level-kg">Group-Level Knowledge Graph Estimation</h4>
+                                        <p>As a precondition for testing the hypotheses H1, H2, and H3, multiple KGs have been estimated following the same procedure as described above.
+Two KGs have been estimated for representing the GIC of SMEs with low Vs high EC. Therefore, firms have been split into two groups according to their EC score, and a knowledge graph has been estimated for each group: 〖KG〗_low^EC for the low EC group, and 〖KG〗_high^EC for the high EC group.
+The same procedure has been replicated by grouping SMEs by INC, enabling the estimation of 〖KG〗_low^INC 〖and KG〗_high^INC, the network representations of the GIC for firms with low Vs high INC. 
+Last, 〖KG〗_low^EP 〖and KG〗_high^EP, the network representations of the GIC for firms with low Vs high EP have been estimated.All the resulting graphs have been visualized by means of the Qgraph R package, using a circular layout.
+                                        </p>
+                                    <br>
+                                    <h4 id="firm-level-kg">Firm-Level Knowledge Graph Estimation</h4>
+                                        <p>In order to calculate firms' GIC score, a KG has been estimated for each of the SMEs included in the research sample. The global network metrics have then been computed considering modules of edge weights. The indices of Global Efficiency, Density, and Global Clustering Coefficient have been calculated by means of the Igraph R package. The Small-Worldness Index has been calculated with the <a href="https://www.rdocumentation.org/packages/qgraph/versions/1.9.5" rel="external nofollow noopener" target="_blank">Qgraph</a> R package.
+                                        </p>
+                                            <hr><br>
+                                
+                                <h3 id="testing-graphs-isomorphism">Testing on Graphs Isomorphism</h3>
+                                    <p>
+                                       In order to test whether the structure of KG significantly differs (i.e., are not isomorphic) when considering firms with <em>low</em> Vs <em>high</em> EC (H1), <em>low</em> Vs <em>high</em> INC (H2), and <em>low</em> Vs <em>high</em> EP (H3), multiple pairwise comparisons have been performed by using the <a href="https://cran.r-project.org/web/packages/NetworkComparisonTest/index.html" rel="external nofollow noopener" target="_blank">Network Comparison Test</a> R package (van Borkulo et al., 2015).
+The NCT is a permutation-based technique developed to test the invariance hypothesis between pairs of networks (Van Borkulo et al., 2022). The NCT tests for two specific hypotheses: the first pertaining to the network structure, tests whether there are significant differences in terms of number and disposition of edges between two networks; the second, tests whether the two networks significantly differ in terms of the overall strength of edges.  
+                                    </p>
+                                    <h4 id="network-structure-invariance">Network Structure Invariance</h4>
+                                        <p>The Network Structure Invariance (<em>M</em> ) tests, for a pair of weighted networks <em>G^1</em> and <em>G^2</em> with adjacency matrices <em>Ω^1</em> and <em>Ω^2</em> respectively, the hypothesis that <em>G^1</em> significantly differs from <em>G^2</em>, assuming as null hypothesis:     
+                                        </p>  
+                                           <p>\begin{equation} \label{eq:cauchy-schwarz} H^0: Ω^1=Ω^2 \end{equation}</p>
+                                        
                             , like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>
                             . If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).
                                     </p>
@@ -106,26 +132,6 @@
                             .
                                         </p>
                                   
-                                        The Density (<em>D</em> ) refers to the number of relationships within the network and measures the actual number of edges over the maximum possible number of edges within a given network (Freeman et al., 1979; Wasserman & Faust, 1994). The Density shows values ranging from 0 to 1, where extreme scores correspond to a null (i.e., edgeless) graph and a complete (fully-connected) graph, respectively. However, although this metric provides a snapshot on nodes tendency to relate to each other, it does not consider the edge weights, resulting in a significant loss of information concerning the strength of nodes’ relationship.               
-                                    </p>
-                                  <br>
-
-
-                                  
-                                  <h3 id="global-clustering-coefficient">Global Clustering Coefficient</h3>
-                                    <p>
-                                        A more complex metric referring to the number of edges between groups of nodes is the Global Clustering Coefficient (Wasserman & Faust, 1994; Barrat et al., 2004), or Global Transitivity, which provides an average rating of nodes' tendency to form triangles in the network (Local Clustering Coefficient). Unlike Density, several variants of the CCmetric have been proposed to deal with weighted networks (Barrat et al., 2004; Zhang & Horvath, 2005; Kalna & Higham, 2006; Picciolo, F. et al., 2022), thus including edge weight information in the calculation of the global transitivity score. For this study, it has been chosen the definition of <em>CC</em> of Barrat (Barrat et al., 2004. As sparsity increases, CC tends to zero, while, trivially, <em>CC</em> = 1 in a fully connected graph. It should be noted, however, that the transitivity index does not have a linear relation with network sparsity, instead it emphasizes the propensity of a network to form clusters (Saramäki et al., 2007), i.e., groups of densely connected nodes, as commonly found in real-world social networks.               
-                                    </p>
-                                  <br>
-                                  <h3 id="global-efficiency">Global Efficiency</h3>
-                                    <p>
-                                        Related to the degree of proximity between nodes, the Average Shortest Path Length (<em>ASPL</em>) or its inverse measure, the Global Efficiency (<em>GE</em> ), refers to the average number of edges required to connect each node with all othernodes (Newman, 2001; Mao & Zhang, 2013). Consequently, <em>GE</em> provides a measure of the average connectivity between the nodes within the network. As in the case of the Global Transitivity metric, there are several methods for computing the <em>ASPL</em>, including calculation methods for weighted networks, such as the Dijkstra's algorithm (Newman, 2001; Dijkstra, 2022). In Dijkstra's algorithm, the weighted path connecting to nodes is provided by the summation of the inverse of the edge’s weights; and in minimizing such summation we assign higher probability to paths connecting greater values (correlations), seemingly to resistors in parallel in an electric circuit.
-                                    </p>
-                                  <br>
-                                  <h3 id="small-worldness-index">Small-Worldness Index</h3>
-                                    <p>
-                                        A last metric, which became very popular in recent years due to its applications in real world networks, is the Small-Worldness Index (Humphries & Gurney, 2008). This composite metric, calculated as the ratio of the Global Transitivity Index (<em>CC</em> ) over <em>ASPL</em>, refers to the tendency of the network to have a high clustering degree and a moderate connectivity degree between nodes (Watts, 1999; Watts & Strogatz, 1998; Borsboom et al., 2011; Watts, 2016).
-                                    </p>
 </article>
  <br>
 <nav aria-label="Multimedia Annexes Naviation">
@@ -139,10 +145,10 @@
         <li class="page-item ">
             <a class="page-link" href="/extras/multimedia-annex-2/index.html" title="Multimedia Annex 2">2</a>
         </li>
-        <li class="page-item active">
+        <li class="page-item ">
             <a class="page-link" href="/extras/multimedia-annex-3/index.html" title="Multimedia Annex 3">3</a>
         </li>
-        <li class="page-item ">
+        <li class="page-item active">
             <a class="page-link" href="/extras/multimedia-annex-4/index.html" title="Multimedia Annex 4">4</a>
         </li>
         <li class="page-item ">
@@ -152,7 +158,7 @@
             <a class="page-link" href="/extras/multimedia-annex-6/index.html" title="Multimedia Annex 6">6</a>
         </li>
         <li class="page-item ">
-            <a class="page-link" href="/extras/multimedia-annex-4/index.html">>>Next</a>
+            <a class="page-link" href="/extras/multimedia-annex-5/index.html">>>Next</a>
         </li>
     </ul>
 </nav>
