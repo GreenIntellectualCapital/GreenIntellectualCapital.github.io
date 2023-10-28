@@ -95,7 +95,7 @@
                                     <h4 id="group-level-kg">Group-Level Knowledge Graph Estimation</h4>
                                         <p>As a precondition for testing the hypotheses H1, H2, and H3, multiple KGs have been estimated following the same procedure as described above.
 Two KGs have been estimated for representing the GIC of SMEs with low Vs high EC. Therefore, firms have been split into two groups according to their EC score, and a knowledge graph has been estimated for each group: 〖KG〗_low^EC for the low EC group, and 〖KG〗_high^EC for the high EC group.
-The same procedure has been replicated by grouping SMEs by INC, enabling the estimation of \(KG_low^INC) 〖and KG〗_high^INC, the network representations of the GIC for firms with low Vs high INC. 
+The same procedure has been replicated by grouping SMEs by INC, enabling the estimation of \(KG_low^INC\) 〖and KG〗_high^INC, the network representations of the GIC for firms with low Vs high INC. 
 Last, 〖KG〗_low^EP 〖and KG〗_high^EP, the network representations of the GIC for firms with low Vs high EP have been estimated.All the resulting graphs have been visualized by means of the Qgraph R package, using a circular layout.
                                         </p>
                                     <br>
@@ -115,13 +115,13 @@ The NCT is a permutation-based technique developed to test the invariance hypoth
                                            <p>\begin{equation} H^0: Ω^1=Ω^2 \end{equation}</p>
 
                                     <h4 id="global-strength-invariance">Network Structure Invariance</h4>
-                                        <p>The Global Strength Invariance (<em>S</em> ), evaluates the difference between the sum of edge weights of <em>G^1</em> and <em>G^2</em>, two networks having nodes <em>i</em> and <em>j</em> with \(i ≠ j). It should be noted that, according to Opsahl et al. (2010), the absolute sum of the weights (\(|<em>w_ij|)) of each network are considered for the Global Strength (<em>W</em> ) measure. The <em>S</em> test statistic is then calculated as:     
+                                        <p>The Global Strength Invariance (<em>S</em> ), evaluates the difference between the sum of edge weights of <em>G^1</em> and <em>G^2</em>, two networks having nodes <em>i</em> and <em>j</em> with \(i ≠ j). It should be noted that, according to Opsahl et al. (2010), the absolute sum of the weights (\(|<em>w_ij|\)) of each network are considered for the Global Strength (<em>W</em> ) measure. The <em>S</em> test statistic is then calculated as:     
                                         </p>  
                                            <p>\begin{equation} S=|∑_(i=1)^p ∑_(j>i)^  (|w_ij^1 |-|w_ij^2 |)|. \end{equation}</p>
                                        
                                         <p>Assuming that, in a given population (<em>p</em> ):</p>
                                             <p>\begin{equation} H^0: ∑_(i=1)^p ∑_(j>i)^  |w_ij^1 |=∑_(i=1)^p ∑_(j>i)^  |w_ij^2 |. \end{equation}</p>
-                                        <p>And, consequently, \(S = 0).</p>
+                                        <p>And, consequently, \(S = 0\).</p>
                                         <p>The NCT is based on a three-step algorithm aimed at (<em>i</em> ) deriving the relevant test statistics M and S of the observed networks' structure; (<em>ii</em> ) recalculating M and S in N permutations by varying edges positioning and weights in order to derive a reference distribution for each of the test statistics; and (<em>iii</em> ) estimating the significance of the observed networks’ test statistics by comparing them with the reference distributions.
 For the analyses of this research, 1,000 permutations have been considered to test on both the Network Structure Invariance and the Global Strength Invariance of KG.
                                         </p>
