@@ -118,25 +118,20 @@ The NCT is a permutation-based technique developed to test the invariance hypoth
                                         <p>The Global Strength Invariance (<em>S</em> ), evaluates the difference between the sum of edge weights of <em>G^1</em> and <em>G^2</em>, two networks having nodes <em>i</em> and <em>j</em> with \(i ≠ j). It should be noted that, according to Opsahl et al. (2010), the absolute sum of the weights (\(|<em>w_ij|)) of each network are considered for the Global Strength (<em>W</em> ) measure. The <em>S</em> test statistic is then calculated as:     
                                         </p>  
                                            <p>\begin{equation} S=|∑_(i=1)^p ∑_(j>i)^  (|w_ij^1 |-|w_ij^2 |)|. \end{equation}</p>
-                                        
-                            , like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>
-                            . If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).
-                                    </p>
-                                        <p> To use display mode, again surround your expression with <code class="language-plaintext highlighter-rouge">$$</code> and place it as a separate paragraph. Here is an example:
+                                       
+                                        <p>Assuming that, in a given population (<em>p</em> ):</p>
+                                            <p>\begin{equation} H^0: ∑_(i=1)^p ∑_(j>i)^  |w_ij^1 |=∑_(i=1)^p ∑_(j>i)^  |w_ij^2 |. \end{equation}</p>
+                                        <p>And, consequently, \(S = 0).</p>
+                                        <p>The NCT is based on a three-step algorithm aimed at (<em>i</em> ) deriving the relevant test statistics M and S of the observed networks' structure; (<em>ii</em> ) recalculating M and S in N permutations by varying edges positioning and weights in order to derive a reference distribution for each of the test statistics; and (<em>iii</em> ) estimating the significance of the observed networks’ test statistics by comparing them with the reference distributions.
+For the analyses of this research, 1,000 permutations have been considered to test on both the Network Structure Invariance and the Global Strength Invariance of KG.
                                         </p>
+
+
+
                                       \[\sum_{k=1}^\infty |\langle x, e_k \rangle|^2 \leq \|x\|^2\] 
-                                    <p>
-                            You can also use <code class="language-plaintext highlighter-rouge">\begin{equation}...\end{equation}</code>
-                            instead of <code class="language-plaintext highlighter-rouge">$$</code>
-                            for display mode math. MathJax will automatically number equations:
-                                    </p>
-                                        <p>\begin{equation} \label{eq:cauchy-schwarz} \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}</p>
-                                        <p>
-                            and by adding <code class="language-plaintext highlighter-rouge">\label{...}</code>
-                            inside the equation environment, we can now refer to the equation using <code class="language-plaintext highlighter-rouge">\eqref</code>
-                            .
-                                        </p>
                                   
+                                        <p>\begin{equation} \label{eq:cauchy-schwarz} \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}</p>
+                                        
 </article>
  <br>
 <nav aria-label="Multimedia Annexes Naviation">
