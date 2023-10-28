@@ -94,13 +94,13 @@
                                     <br>
                                     <h4 id="group-level-kg">Group-Level Knowledge Graph Estimation</h4>
                                         <p>As a precondition for testing the hypotheses H1, H2, and H3, multiple KGs have been estimated following the same procedure as described above.
-Two KGs have been estimated for representing the GIC of SMEs with low Vs high EC. Therefore, firms have been split into two groups according to their EC score, and a knowledge graph has been estimated for each group: 〖KG〗_low^EC for the low EC group, and 〖KG〗_high^EC for the high EC group.
-The same procedure has been replicated by grouping SMEs by INC, enabling the estimation of \(KG_(low)^(INC)\) and \(KG_{high}^{INC}\), the network representations of the GIC for firms with low Vs high INC. 
-Last, 〖KG〗_low^EP 〖and KG〗_high^EP, the network representations of the GIC for firms with low Vs high EP have been estimated.All the resulting graphs have been visualized by means of the Qgraph R package, using a circular layout.
+Two KGs have been estimated for representing the GIC of SMEs with <em>low</em> Vs <em>high</em> EC. Therefore, firms have been split into two groups according to their EC score, and a knowledge graph has been estimated for each group: \(KG_{low}^{ec}\) for the <em>low</em> EC group, and \(KG_{high}^{ec}\) for the <em>high</em> EC group.
+The same procedure has been replicated by grouping SMEs by INC, enabling the estimation of \(KG_{low}^{inc}\) and \(KG_{high}^{inc}\), the network representations of the GIC for firms with <em>low</em> Vs <em>high</em> INC. 
+Last, \(KG_{low}^{ep}\) and \(KG_{high}^{ep}\), the network representations of the GIC for firms with <em>low</em> Vs <em>high</em> EP have been estimated. All the resulting graphs have been visualized by means of the <a href="https://www.rdocumentation.org/packages/qgraph/versions/1.9.5" rel="external nofollow noopener" target="_blank">Qgraph</a> R package, using a circular layout.
                                         </p>
                                     <br>
                                     <h4 id="firm-level-kg">Firm-Level Knowledge Graph Estimation</h4>
-                                        <p>In order to calculate firms' GIC score, a KG has been estimated for each of the SMEs included in the research sample. The global network metrics have then been computed considering modules of edge weights. The indices of Global Efficiency, Density, and Global Clustering Coefficient have been calculated by means of the Igraph R package. The Small-Worldness Index has been calculated with the <a href="https://www.rdocumentation.org/packages/qgraph/versions/1.9.5" rel="external nofollow noopener" target="_blank">Qgraph</a> R package.
+                                        <p>In order to calculate firms' GIC score, a KG has been estimated for each of the SMEs included in the research sample. The global network metrics have then been computed considering modules of edge weights. The indices of Global Efficiency, Density, and Global Clustering Coefficient have been calculated by means of the <a href="https://www.rdocumentation.org/packages/qgraph/versions/1.9.5" rel="external nofollow noopener" target="_blank">Qgraph</a> R package. The Small-Worldness Index has been calculated with the <a href="https://cran.r-project.org/web/packages/igraph/index.html" rel="external nofollow noopener" target="_blank">igraph</a> R package.
                                         </p>
                                             <hr><br>
                                 
@@ -117,20 +117,20 @@ The NCT is a permutation-based technique developed to test the invariance hypoth
                                     <h4 id="global-strength-invariance">Network Structure Invariance</h4>
                                         <p>The Global Strength Invariance (<em>S</em> ), evaluates the difference between the sum of edge weights of <em>G^1</em> and <em>G^2</em>, two networks having nodes <em>i</em> and <em>j</em> with \(i ≠ j). It should be noted that, according to Opsahl et al. (2010), the absolute sum of the weights (\(|<em>w_ij|\)) of each network are considered for the Global Strength (<em>W</em> ) measure. The <em>S</em> test statistic is then calculated as:     
                                         </p>  
-                                           <p>\begin{equation} S=|∑_(i=1)^p ∑_(j>i)^  (|w_ij^1 |-|w_ij^2 |)|. \end{equation}</p>
+                                           <p>\begin{equation} S=|∑_{i=1}^p ∑_(j>i)^  (|w_ij^1 |-|w_ij^2 |)|. \end{equation}</p>
                                        
-                                        <p>Assuming that, in a given population (<em>p</em> ):</p>
+                                        <p>Assuming that, in a given population (<em>p</em>):</p>
                                             <p>\begin{equation} H^0: ∑_(i=1)^p ∑_(j>i)^  |w_ij^1 |=∑_(i=1)^p ∑_(j>i)^  |w_ij^2 |. \end{equation}</p>
                                         <p>And, consequently, \(S = 0\).</p>
-                                        <p>The NCT is based on a three-step algorithm aimed at (<em>i</em> ) deriving the relevant test statistics M and S of the observed networks' structure; (<em>ii</em> ) recalculating M and S in N permutations by varying edges positioning and weights in order to derive a reference distribution for each of the test statistics; and (<em>iii</em> ) estimating the significance of the observed networks’ test statistics by comparing them with the reference distributions.
+                                        <p>The NCT is based on a three-step algorithm aimed at (<em>i</em>) deriving the relevant test statistics <em>M</em> and <em>S</em> of the observed networks' structure; (<em>ii</em>) recalculating <em>M</em> and <em>S</em> in <em>N</em> permutations by varying edges positioning and weights in order to derive a reference distribution for each of the test statistics; and (<em>iii</em>) estimating the significance of the observed networks’ test statistics by comparing them with the reference distributions.
 For the analyses of this research, 1,000 permutations have been considered to test on both the Network Structure Invariance and the Global Strength Invariance of KG.
                                         </p>
 
-
+<p>\begin{equation}  |sum_{i=1}^\p sum_{j>i} (|w_{ij}^1|-|w_{ij}^2|)|. \end{equation}</p>
 
                                       \[\sum_{k=1}^\infty |\langle x, e_k \rangle|^2 \leq \|x\|^2\] 
                                   
-                                        <p>\begin{equation} \label{eq:cauchy-schwarz} \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}</p>
+                                        <p>\begin{equation}  \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \end{equation}</p>
                                         
 </article>
  <br>
