@@ -112,7 +112,12 @@ The NCT is a permutation-based technique developed to test the invariance hypoth
                                     <h4 id="network-structure-invariance">Network Structure Invariance</h4>
                                         <p>The Network Structure Invariance (<em>M</em> ) tests, for a pair of weighted networks <em>G^1</em> and <em>G^2</em> with adjacency matrices <em>Ω^1</em> and <em>Ω^2</em> respectively, the hypothesis that <em>G^1</em> significantly differs from <em>G^2</em>, assuming as null hypothesis:     
                                         </p>  
-                                           <p>\begin{equation} \label{eq:cauchy-schwarz} H^0: Ω^1=Ω^2 \end{equation}</p>
+                                           <p>\begin{equation} H^0: Ω^1=Ω^2 \end{equation}</p>
+
+                                    <h4 id="global-strength-invariance">Network Structure Invariance</h4>
+                                        <p>The Global Strength Invariance (<em>S</em> ), evaluates the difference between the sum of edge weights of <em>G^1</em> and <em>G^2</em>, two networks having nodes <em>i</em> and <em>j</em> with \(i ≠ j). It should be noted that, according to Opsahl et al. (2010), the absolute sum of the weights (\(|<em>w_ij|)) of each network are considered for the Global Strength (<em>W</em> ) measure. The <em>S</em> test statistic is then calculated as:     
+                                        </p>  
+                                           <p>\begin{equation} S=|∑_(i=1)^p ∑_(j>i)^  (|w_ij^1 |-|w_ij^2 |)|. \end{equation}</p>
                                         
                             , like <code class="language-plaintext highlighter-rouge">$$ E = mc^2 $$</code>
                             . If you leave it inside a paragraph, it will produce an inline expression, just like \(E = mc^2\).
